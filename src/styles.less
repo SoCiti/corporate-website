@@ -23,6 +23,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
 body{.arial(14px, 500, @white); background: @white; overflow: hidden;}
 main{padding: 85px 20px 40px 20px;}
+footer{display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%; min-height: 350px; padding: 40px 20px; background: @white-purple; color: @navy; }
 
 a{.arial(16px, 500, @gold); text-decoration: none; transition: .2s ease-in-out;
     &:visited{color: @gold;}
@@ -44,8 +45,10 @@ a.primary-button{display: flex; flex-direction: row; justify-content: center; al
 
 @media screen and (min-width: 1450px){
     main{padding: 85px 40px 40px 40px;}
+    footer{padding: 40px;}
 }
 
 @media screen and (min-width: 2000px){
     main{padding: 85px 60px 40px 60px;}
+    footer{padding: 40px 60px;}
 }

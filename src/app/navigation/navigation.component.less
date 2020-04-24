@@ -1,8 +1,15 @@
 @import '../../styles.less';
 
-header{display: flex; flex-direction: row; justify-content: space-between; align-items: center; width: 100%; height: 65px; padding: 0 20px; background: @white; color: @white; box-shadow: 0 1px 4px -1px rgba(101, 74, 152, 0.05), 0 3px 5px 0 rgba(112, 91, 140, 0.04), 0 1px 8px 0 rgba(0, 0, 0, 0.06); position: fixed; top: 0; left: 0; z-index: 100;
+header{display: flex; flex-direction: row; justify-content: flex-start; align-items: center; width: 100%; height: 65px; padding: 0 20px; background: @white; color: @white; box-shadow: 0 1px 4px -1px rgba(101, 74, 152, 0.05), 0 3px 5px 0 rgba(112, 91, 140, 0.04), 0 1px 8px 0 rgba(0, 0, 0, 0.06); position: fixed; top: 0; left: 0; z-index: 100;
     .logo{.arial(24px, 900, @plum); letter-spacing: 3px;}
-    .nav-cta{display: flex; flex-direction: row; justify-content: flex-end; align-items: center;}
+    ul.nav-links{display: flex; flex-direction: row; justify-content: flex-start;  align-items: center; margin-left: 80px;
+        li{display: flex; justify-content: center; align-items: center;
+            a{display: flex; justify-content: center; align-items: center; .arial(14px, 500, @navy); padding: 0 28px; text-transform: uppercase; letter-spacing: 2px; font-variant: small-caps;
+                &:hover{color: darken(@white-purple, 5%);}
+            }
+        }
+    }
+    .nav-cta{display: flex; flex-direction: row; justify-content: flex-end; align-items: center; margin-left: auto;}
 }
 
 @media screen and (min-width: 1450px){
