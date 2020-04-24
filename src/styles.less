@@ -21,9 +21,11 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     color: @color;
 }
 
-body{.arial(14px, 500, @white); background: @white; overflow: hidden;}
+body{.arial(14px, 500, @white); background: @white; overflow-x: hidden;}
 main{padding: 85px 20px 40px 20px;}
-footer{display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%; min-height: 350px; padding: 40px 20px; background: @white-purple; color: @navy; }
+footer{display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%; min-height: 350px; padding: 40px 20px; background: lighten(@white-purple, 2.5%); color: @navy; position: relative;
+    .footer-copyright{display: flex; flex-direction: row; justify-content: flex-start; align-items: center; width: 100%; height: 48px; padding: 0 20px; background: @white-purple; .arial(12px, 600, @navy); position: absolute; bottom: 0; left: 0;}
+}
 
 a{.arial(16px, 500, @gold); text-decoration: none; transition: .2s ease-in-out;
     &:visited{color: @gold;}
@@ -33,7 +35,7 @@ a{.arial(16px, 500, @gold); text-decoration: none; transition: .2s ease-in-out;
 h1{.arial(42px, 900, @slate); padding: 28px 0; text-align: center;}
 h2{.arial(36px, 700, @black); padding: 24px 0;}
 h3{.arial(24px, 700, @black); padding: 20px 0;}
-p{.arial(16px, 600, @navy); line-height: 1.4; padding: 20px 0; width: 100%; max-width: 768px;}
+p{.arial(16px, 600, @navy); line-height: 1.4; padding: 40px 0; width: 100%; max-width: 768px;}
 
 a.tertiary-button{display: flex;  flex-direction: row; justify-content: center; align-items: center; min-width: 45px; padding: 0 20px; height: 40px; .arial(16px, 600, @navy); letter-spacing: 1.25px; text-decoration: underline;
     &:hover{color: darken(@navy, 10%);}
@@ -45,10 +47,14 @@ a.primary-button{display: flex; flex-direction: row; justify-content: center; al
 
 @media screen and (min-width: 1450px){
     main{padding: 85px 40px 40px 40px;}
-    footer{padding: 40px;}
+    footer{padding: 40px;
+        .footer-copyright{padding: 0 40px;}
+    }
 }
 
 @media screen and (min-width: 2000px){
     main{padding: 85px 60px 40px 60px;}
-    footer{padding: 40px 60px;}
+    footer{padding: 40px 60px;
+        .footer-copyright{padding: 0 60px;}
+    }
 }
