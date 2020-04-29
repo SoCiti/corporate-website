@@ -1,15 +1,16 @@
 <header>
-    <a routerLink="home" class="logo">LOGO HERE</a>
+    <a routerLink="home" class="logo"></a>
     <ul class="nav-links">
-        <li><a routerLink="home">Home</a></li>
-        <li><a routerLink="platform">Platform</a></li>
-        <li><a routerLink="enterprise">Enterprise</a></li>
-        <li><a routerLink="solutions">Solutions</a></li>
-        <li><a routerLink="help">Help</a></li>
+        <li><a routerLink="home" (click)="toggleSideNav()">Home</a></li>
+        <li><a routerLink="platform" (click)="toggleSideNav()">Platform</a></li>
+        <li><a routerLink="enterprise" (click)="toggleSideNav()">Enterprise</a></li>
+        <li><a routerLink="solutions" (click)="toggleSideNav()">Solutions</a></li>
+        <li><a routerLink="help" (click)="toggleSideNav()">Help</a></li>
     </ul>
     <div class="nav-cta">
 
         <a class="tertiary-button">Login</a>
         <a class="primary-button">Sign Up</a>
     </div>
+    <i class="gg-menu-right" (click)="toggleSideNav()"></i>
 </header>

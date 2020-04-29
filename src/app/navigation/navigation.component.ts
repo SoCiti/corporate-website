@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavigationComponent implements OnInit {
 
+  navActive: false;
+  sideNav;
+
   constructor() { }
 
   ngOnInit(): void {
+    this.sideNav = document.querySelector('header');
   }
 
+  toggleSideNav() {
+    console.log(this.sideNav);
+    this.sideNav.classList.toggle('open');
+  }
 }
