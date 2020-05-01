@@ -8,20 +8,20 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { NavigationComponent } from './navigation/navigation.component';
 import { HomeComponent } from './home/home.component';
-import { PlatformComponent } from './platform/platform.component';
 import { SolutionsComponent } from './solutions/solutions.component';
 import { EnterpriseComponent } from './enterprise/enterprise.component';
 import { HelpComponent } from './help/help.component';
+import { ForbiddenComponent } from './forbidden/forbidden.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent,
     HomeComponent,
-    PlatformComponent,
     SolutionsComponent,
     EnterpriseComponent,
-    HelpComponent
+    HelpComponent,
+    ForbiddenComponent
   ],
   imports: [
     BrowserModule,
