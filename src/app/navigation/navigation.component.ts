@@ -18,6 +18,6 @@ export class NavigationComponent implements OnInit {
 
   toggleSideNav() {
     this.sideNav.classList.toggle('open');
-    window.navigator.vibrate(200);
+    window.navigator.vibrate(100);
   }
 }
