@@ -31,7 +31,9 @@
             "styles": [
               "src/styles.less"
             ],
-            "scripts": [],
+            "scripts": [
+              "src/assets/js/scripts.js"
+            ],
             "es5BrowserSupport": true
           },
           "configurations": {
