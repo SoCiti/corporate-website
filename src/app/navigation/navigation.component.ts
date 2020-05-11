@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-navigation',
@@ -11,28 +11,20 @@ export class NavigationComponent implements OnInit {
   sideNav;
 
   header = document.getElementById('header');
-  sectionOne = document.getElementById('wave-end');
+  @HostListener('window:scroll', ['$event'])
 
-
-
-  sectionOneObserver = new IntersectionObserver(function(
-    entries,
-    sectionOneObserver
-  ) {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) {
-        this.header.classList.add('nav-scrolled');
-      } else {
-        this.header.classList.remove('nav-scrolled');
-      }
-    });
-  }, );
-
+  myFunction(event) {
+    if (document.body.scrollTop > 5 || document.documentElement.scrollTop > 5) {
+      document.getElementById('header').className = 'stuck';
+    } else {
+      document.getElementById('header').className = '';
+    }
+  }
   constructor() { }
 
   ngOnInit(): void {
     this.sideNav = document.querySelector('header');
-    this.sectionOneObserver.observe(this.sectionOne);
+
   }
 
   toggleSideNav() {
