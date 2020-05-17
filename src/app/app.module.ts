@@ -12,6 +12,7 @@ import { SolutionsComponent } from './solutions/solutions.component';
 import { EnterpriseComponent } from './enterprise/enterprise.component';
 import { HelpComponent } from './help/help.component';
 import { ForbiddenComponent } from './forbidden/forbidden.component';
+import { SneakPeekComponent } from './sneak-peek/sneak-peek.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ForbiddenComponent } from './forbidden/forbidden.component';
     SolutionsComponent,
     EnterpriseComponent,
     HelpComponent,
-    ForbiddenComponent
+    ForbiddenComponent,
+    SneakPeekComponent
   ],
   imports: [
     BrowserModule,
