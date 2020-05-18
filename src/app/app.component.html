@@ -1,7 +1,7 @@
 <app-navigation></app-navigation>
 
 
-<router-outlet></router-outlet>
+<router-outlet (activate)="onActivate($event)"></router-outlet>
 
 <footer>
   <div class="footer-links">

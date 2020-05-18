@@ -8,4 +8,9 @@ import { Component, ViewEncapsulation} from '@angular/core';
 })
 export class AppComponent {
   title = 'soCiti';
+
+  onActivate(event) {
+    window.scroll(0, 0);
+  }
 }
+
