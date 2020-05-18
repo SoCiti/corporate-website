@@ -48,6 +48,9 @@ p{.arial(16px, 600, @navy); line-height: 1.6; padding: 40px 0; width: 100%; max-
 a.tertiary-button{display: flex;  flex-direction: row; justify-content: center; align-items: center; white-space: nowrap; min-width: 45px; padding: 0 20px; height: 40px; .arial(16px, 600, @navy); letter-spacing: 1.25px; text-decoration: underline;
     &:hover{color: darken(@navy, 10%);}
 }
+a.secondary-button{display: flex; flex-direction: row; justify-content: center; align-items: center; min-width: 60px; padding: 0 24px; height: 48px; text-align: center; background: transparent; .arial(16px, 700, @navy); border-radius: 8px; border: 2px solid @navy; margin-right: 15px;
+  &:hover{background: @white; color: @plum;}
+}
 a.primary-button{display: flex; flex-direction: row; justify-content: center; align-items: center; white-space: nowrap; min-width: 60px; padding: 0 18px; height: 40px; text-align: center; background: @white-purple; .arial(16px, 700, @navy); border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,.1);
     &:hover{background: darken(@white-purple, 5%);}
 } 

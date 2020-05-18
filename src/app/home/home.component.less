@@ -10,7 +10,7 @@
         img{width: 300px; height: auto; margin: 5px 0 0 0;}
         p{/*.arial(18px, 600, @white); */ .arial(18px, 600, @slate); max-width: 540px; line-height: 1.6;}
         .hero-button-container{display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-wrap: nowrap; margin: 25px 0 0 0;
-            a.secondary-button{display: flex; flex-direction: row; justify-content: center; align-items: center; min-width: 60px; padding: 0 24px; height: 48px; text-align: center; background: transparent; .arial(16px, 700, @navy); border-radius: 8px; border: 1px solid @navy; margin-right: 15px;
+            a.secondary-button{display: flex; flex-direction: row; justify-content: center; align-items: center; min-width: 60px; padding: 0 24px; height: 48px; text-align: center; background: transparent; .arial(16px, 700, @navy); border-radius: 8px; border: 2px solid @navy; margin-right: 15px;
                 &:hover{background: @white; color: @plum;}
             }
             a.primary-button{background: @plum; color: @white-purple; height: 48px; padding: 0 24px;
@@ -30,7 +30,11 @@ video.featured-video{border-radius: 10px; box-shadow: 0 1.2px 3.4px -5px rgba(0,
             }
             p{padding: 20px 0;}
         }
-        svg{width: 50%; height: auto;}
+        .solution-icon-container{width: 50%; height: 300px; max-height: 100%; position: relative;
+            svg.svg-bg{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: auto; height: 165%; object-fit: cover; opacity: .65; z-index: 1;}
+            svg.svg-icon{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: auto; height: 100%; object-fit: cover; z-index: 2;}
+        }
+
         &:nth-of-type(2){
             .info{
                 h2{
@@ -48,7 +52,13 @@ video.featured-video{border-radius: 10px; box-shadow: 0 1.2px 3.4px -5px rgba(0,
         &:nth-of-type(even){flex-direction: row-reverse;
             .info{margin: 0 0 0 100px;}
         }
+        &:nth-of-type(odd){
+            .solution-icon-container{
+                svg.svg-bg{transform: translate(-50%, -50%) rotateY(180deg);}
+            }
+        }
     }
+    .view-all{margin: 40px auto;}
 }
 
 .sociti-advantage{
