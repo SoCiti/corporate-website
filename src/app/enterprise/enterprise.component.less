@@ -1,5 +1,10 @@
 @import '../../styles.less';
 
+.hero-section.inside-page{display: flex; width: 100%; height: auto; padding-bottom: 25%; /*background: url('../../assets/images/nyc.webp') no-repeat;*/ background-size: cover; background-position: center center; background-blend-mode: luminosity; /*background-color: rgba(84, 67, 136, .5);*/ margin-top: 0px; position: relative; overflow: hidden; z-index: 1;
+    #wave-end{display: block; position: absolute; width: 1px; height: 1px; top: 80px; left: 0; opacity: 0; pointer-events: none;}
+    svg{display: flex; width: 145%; height: auto; max-width: inherit; flex: 0 0 auto; transform: rotateY(180deg); position: absolute; top: 0; right: 0%; overflow: hidden;}
+}
+
 .info-cards-container{display: flex; flex-direction: row; justify-content: space-around; align-items: flex-start; flex-wrap: wrap; width: 100%; min-height: 200px; margin-top: 40px;
     .info-card{display: flex; flex-direction: column; justify-content: flex-start; align-items: center; flex: 1; min-width: 275px; min-height: 175px; padding: 40px; margin: 20px; background: @white; border: 1px solid @navy; /*border-radius: 12px; box-shadow: 0 4px 20px rgba(84,67,136,.1);*/
         h2{padding-bottom: 20px;}

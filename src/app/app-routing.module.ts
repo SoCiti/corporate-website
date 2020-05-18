@@ -7,6 +7,8 @@ import { HelpComponent } from './help/help.component';
 import { ForbiddenComponent } from './forbidden/forbidden.component';
 import { SneakPeekComponent } from './sneak-peek/sneak-peek.component';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { PartnersComponent } from './partners/partners.component';
+import { InvestorRelationsComponent } from './investor-relations/investor-relations.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -15,6 +17,8 @@ const routes: Routes = [
   {path: 'contact', component: HelpComponent},
   {path: 'demo', component: SneakPeekComponent},
   {path: 'about-us', component: AboutUsComponent},
+  {path: 'partners', component: PartnersComponent},
+  {path: 'investors', component: InvestorRelationsComponent},
   {path: '', pathMatch: 'full', redirectTo: 'home'},
   {path: '**', component: ForbiddenComponent}
 ];

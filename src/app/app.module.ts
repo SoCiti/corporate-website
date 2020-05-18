@@ -14,6 +14,8 @@ import { HelpComponent } from './help/help.component';
 import { ForbiddenComponent } from './forbidden/forbidden.component';
 import { SneakPeekComponent } from './sneak-peek/sneak-peek.component';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { InvestorRelationsComponent } from './investor-relations/investor-relations.component';
+import { PartnersComponent } from './partners/partners.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { AboutUsComponent } from './about-us/about-us.component';
     HelpComponent,
     ForbiddenComponent,
     SneakPeekComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    InvestorRelationsComponent,
+    PartnersComponent
   ],
   imports: [
     BrowserModule,
