@@ -13,6 +13,7 @@ import { EnterpriseComponent } from './enterprise/enterprise.component';
 import { HelpComponent } from './help/help.component';
 import { ForbiddenComponent } from './forbidden/forbidden.component';
 import { SneakPeekComponent } from './sneak-peek/sneak-peek.component';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { SneakPeekComponent } from './sneak-peek/sneak-peek.component';
     EnterpriseComponent,
     HelpComponent,
     ForbiddenComponent,
-    SneakPeekComponent
+    SneakPeekComponent,
+    AboutUsComponent
   ],
   imports: [
     BrowserModule,
