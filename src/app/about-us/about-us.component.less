@@ -10,10 +10,10 @@ p{margin: 0 auto;
 }
 
 .leadership-cards-container{display: flex; flex-direction: row; justify-content: space-evenly; align-items: flex-start; flex-wrap: wrap; 
-    .individual-card{display: flex; flex-direction: column; justify-content: center; align-items: center; flex-basis: calc(50% - 160px); min-width: 275px; padding: 20px; margin: 40px; background: @white; border-radius: 10px; box-shadow: 0 0.6px 1.8px rgba(0, 0, 0, 0.014), 0 1.5px 4.3px rgba(0, 0, 0, 0.02), 0 2.9px 8.1px rgba(0, 0, 0, 0.025), 0 5.1px 14.5px rgba(0, 0, 0, 0.03), 0 9.6px 27.2px rgba(0, 0, 0, 0.036), 0 23px 65px rgba(0, 0, 0, 0.05);
-        .headshot{width: 125px; height: 125px; background: url('../../assets/images/michael_headshot.webp') no-repeat; background-size: contain; border-radius: 100%;}
-        h2{.arial(24px, 700, @black); padding-bottom: 12px;}
-        span.role{.arial(18px, 600, @plum); text-transform: uppercase; letter-spacing: 1.5px;}
+    .individual-card{display: flex; flex-direction: column; justify-content: center; align-items: center; flex-basis: calc(50% - 160px); flex-grow: 1; min-width: 275px; padding: 20px 20px 60px 20px; margin: 40px; background: @white; border-radius: 10px; box-shadow: 0 0.6px 1.8px rgba(0, 0, 0, 0.014), 0 1.5px 4.3px rgba(0, 0, 0, 0.02), 0 2.9px 8.1px rgba(0, 0, 0, 0.025), 0 5.1px 14.5px rgba(0, 0, 0, 0.03), 0 9.6px 27.2px rgba(0, 0, 0, 0.036), 0 23px 65px rgba(0, 0, 0, 0.05); position: relative;
+        .headshot{width: 175px; height: 175px; background: url('../../assets/images/michael_headshot.webp') no-repeat; background-size: contain; border: 4px solid @white-purple; border-radius: 100%;}
+        h2{.arial(28px, 700, @black); padding-bottom: 12px;}
+        span.role{display: flex; flex-direction: row; justify-content: center; align-items: center; width: 100%; padding: 10px 0; .arial(16px, 500, @white-purple); background: @plum; text-transform: uppercase; letter-spacing: 1.5px; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; position: absolute; bottom: 0; left: 0;}
         &:nth-of-type(2){
             .headshot{background: url('../../assets/images/ella_headshot.webp') no-repeat; background-size: contain;}
         }
