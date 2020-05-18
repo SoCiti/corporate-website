@@ -4,3 +4,24 @@
     #wave-end{display: block; position: absolute; width: 1px; height: 1px; top: 80px; left: 0; opacity: 0; pointer-events: none;}
     svg{display: flex; width: 145%; height: auto; max-width: inherit; flex: 0 0 auto; transform: rotateY(180deg); position: absolute; top: 0; right: 0%; overflow: hidden;}
 }
+
+p{margin: 0 auto;
+    span.bold{font-weight: 900;}
+}
+
+.leadership-cards-container{display: flex; flex-direction: row; justify-content: space-evenly; align-items: flex-start; flex-wrap: wrap; 
+    .individual-card{display: flex; flex-direction: column; justify-content: center; align-items: center; flex-basis: calc(50% - 160px); min-width: 275px; padding: 20px; margin: 40px; background: @white; border-radius: 10px; box-shadow: 0 0.6px 1.8px rgba(0, 0, 0, 0.014), 0 1.5px 4.3px rgba(0, 0, 0, 0.02), 0 2.9px 8.1px rgba(0, 0, 0, 0.025), 0 5.1px 14.5px rgba(0, 0, 0, 0.03), 0 9.6px 27.2px rgba(0, 0, 0, 0.036), 0 23px 65px rgba(0, 0, 0, 0.05);
+        .headshot{width: 125px; height: 125px; background: url('../../assets/images/michael_headshot.webp') no-repeat; background-size: contain; border-radius: 100%;}
+        h2{.arial(24px, 700, @black); padding-bottom: 12px;}
+        span.role{.arial(18px, 600, @plum); text-transform: uppercase; letter-spacing: 1.5px;}
+        &:nth-of-type(2){
+            .headshot{background: url('../../assets/images/ella_headshot.webp') no-repeat; background-size: contain;}
+        }
+        &:nth-of-type(3){
+            .headshot{background: url('../../assets/images/jon-headshot-temp.jpg') no-repeat; background-size: contain;}
+        }
+        &:nth-of-type(4){
+            .headshot{background: url('../../assets/images/jeremy-headshot.jpeg') no-repeat; background-size: contain;}
+        }
+    }
+}
