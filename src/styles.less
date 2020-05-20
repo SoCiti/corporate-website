@@ -81,6 +81,15 @@ a.secondary-button{display: flex; flex-direction: row; justify-content: center; 
 a.primary-button{display: flex; flex-direction: row; justify-content: center; align-items: center; white-space: nowrap; min-width: 60px; padding: 0 18px; height: 40px; text-align: center; background: @white-purple; .arial(16px, 700, @navy); border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,.1);
     &:hover{background: darken(@white-purple, 5%);}
 } 
+
+@media screen and (max-width: 876px){
+  footer{
+    .footer-links{flex-direction: column; justify-content: flex-end; align-items: center;
+      a.footer-logo{margin-right: 0;}
+      ul.links-column{margin-left: 0; margin-bottom: 20px; width: 100%;}
+    }
+  }
+}
 @media screen and (max-width: 768px){
   main{padding: 20px 20px 40px 20px;
     footer{padding: 40px 20px 50px 20px;
