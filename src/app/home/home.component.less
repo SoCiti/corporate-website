@@ -64,7 +64,7 @@ video.featured-video{border-radius: 10px; box-shadow: 0 1.2px 3.4px -5px rgba(0,
 
 .sociti-advantage{width: 100%; height: 0; padding-bottom: 56.25%; background: url('../../assets/images/nyc.webp') no-repeat; background-position: center center; background-size: cover; background-blend-mode: luminosity; background-color: rgba(84, 67, 136, .5); color: @white; position: relative;
     h1{color: @white; margin-top: 0; padding-top: 0;}
-    .section-content{display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: 3;
+    .section-content{display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%; height: 100%; padding: 20px; position: absolute; top: 0; left: 0; z-index: 3; overflow: hidden;
         p{color: @white;}
         .tagline{display: flex; flex-direction: row; justify-content: center; align-items: flex-start; width: 100%;
             span{.arial(32px, 700, @white-purple); position: relative; padding: 0 20px;
@@ -89,10 +89,18 @@ video.featured-video{border-radius: 10px; box-shadow: 0 1.2px 3.4px -5px rgba(0,
         .hero-section-content{padding: 0px 40px 40px 40px;}
     }
 }
-@media screen and (max-width: 1000px){
-    .hero-section{
+
+@media screen and (max-width: 1225px){
+    .hero-section{padding-bottom: 63.25%;}
+}
+
+@media screen and (max-width: 1075px){
+    .hero-section{padding-bottom: 75.25%;
         svg{width: 170%;}
     }
+}
+@media screen and (max-width: 950px){
+    .hero-section{padding-bottom: 80%; min-height: 100vh;}
 }
 @media screen and (max-width: 876px){
     .info-cards-container{
@@ -119,7 +127,7 @@ video.featured-video{border-radius: 10px; box-shadow: 0 1.2px 3.4px -5px rgba(0,
 @media screen and (max-width: 768px){
     .hero-section{padding-bottom: 83.25%;
         .hero-section-content{padding: 0 20px 40px 20px;
-            p{display: none;}
+            p{}
             .hero-button-container{flex-direction: column; align-items: flex-start; width: 100%; max-width: 275px; margin-left: 10px;
                 a.secondary-button, a.primary-button{width: 100%;}
                 a.secondary-button{margin-bottom: 20px;}
