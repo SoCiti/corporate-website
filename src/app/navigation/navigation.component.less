@@ -69,6 +69,15 @@ header{display: flex; flex-direction: row; justify-content: flex-start; align-it
             }
             ul.nav-links{transform: translateX(0%);}
         }
+        &.stuck{
+            &.open{
+                ul.nav-links{
+                    > li{
+                        a{color: @white;}
+                    }
+                }
+            }
+        }
     }
 }
 
