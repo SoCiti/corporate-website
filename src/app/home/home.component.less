@@ -62,16 +62,16 @@ video.featured-video{border-radius: 10px; box-shadow: 0 1.2px 3.4px -5px rgba(0,
     .view-all{margin: 40px auto;}
 }
 
-.sociti-advantage{width: calc(100vw - 8px); height: 0; margin-left: -40px; padding-bottom: 56.25%; background: url('../../assets/images/nyc.webp') no-repeat; background-position: center center; background-size: cover; background-blend-mode: luminosity; background-color: rgba(84, 67, 136, .5); color: @white; position: relative;
+.sociti-advantage{width: calc(100vw - 8px); height: 0; margin: 0 0 -40px -40px; padding-bottom: 56.25%; background: url('../../assets/images/nyc.webp') no-repeat; background-position: center center; background-size: cover; background-blend-mode: luminosity; background-color: rgba(84, 67, 136, .5); color: @white; position: relative;
     h1{font-size: 4vw; color: @white; margin-top: 0; padding-top: 0;}
     .section-content{display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%; height: 100%; padding: 20px; position: absolute; top: 0; left: 0; z-index: 3; overflow: hidden;
         p{font-size: 1.5vw; color: @white;}
         .tagline{display: flex; flex-direction: row; justify-content: center; align-items: flex-start; width: 100%;
-            span{.arial(32px, 700, @white-purple); font-size: 2.5vw; position: relative; padding: 0 20px;
+            span{.arial(32px, 700, @white-purple); font-size: 2.5vw; position: relative; padding: 0 20px; white-space: nowrap;
                 
             }
         }
-        a.secondary-button{color: @white; background: transparent; border: 2px solid @white; margin-top: 60px;
+        a.secondary-button{color: @white; background: rgba(0,0,0,.45); border: 2px solid @white; margin-top: 60px; flex-shrink: 0;
             &:hover{color: @plum; background: @white;}
         }
     }
@@ -137,7 +137,17 @@ video.featured-video{border-radius: 10px; box-shadow: 0 1.2px 3.4px -5px rgba(0,
             }
         }
     }
-    .sociti-advantage{margin-left: -20px;}
+    .sociti-advantage{padding-bottom: 78.25%; margin-left: -20px;
+        h1{font-size: 32px;}
+        .section-content{
+            p{font-size: 14px;}
+            .tagline{
+                span{font-size: 21px;}
+            }
+            a.secondary-button{}
+        }
+    
+    }
 }
 
 @media screen and (max-width: 540px){
@@ -149,11 +159,23 @@ video.featured-video{border-radius: 10px; box-shadow: 0 1.2px 3.4px -5px rgba(0,
             .hero-button-container{ margin: 25px auto 0 auto;}
         }
     }
+    .sociti-advantage{padding-bottom: 96.25%;
+        h1{padding-bottom: 12px;}
+    }
 }
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 450px){
     .hero-section{min-height: 100vh;
 
+    }
+    .sociti-advantage{padding-bottom: 145.25%;
+        .section-content{
+            p{}
+            .tagline{
+                span{font-size: 16px; padding: 0 12px;}
+            }
+            a.secondary-button{margin-top: 45px;}
+        }
     }
 }
 
