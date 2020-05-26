@@ -27,7 +27,7 @@
 ::-webkit-scrollbar-thumb{background: linear-gradient(180deg, @plum 25%, @ginger); border-radius: 6px;}
 ::selection{background: rgba(84, 67, 136, .85); color: @white; }
 body{.arial(14px, 500, @white); background: @white;}
-main{padding: 0px 40px 40px 40px; max-width: 1650px; margin: 0 auto;}
+main{padding: 0px 40px 0px 40px; max-width: 1650px; margin: 0 auto;}
 footer{display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%; min-height: 350px; padding: 40px 40px 50px 40px; background: lighten(@white-purple, 2.5%); color: @navy; position: relative;
   .footer-links{display: flex; flex-direction: row; justify-content: flex-end; align-items: flex-start; width: 100%;
     a.footer-logo{display: flex; width: 145px; height: 145px; background: url('./assets/images/logo-white.png') no-repeat; filter: invert(100%); flex-shrink: 0; align-self: center; background-size: contain; margin-right: auto;}
@@ -70,7 +70,7 @@ a{.arial(16px, 500, @gold); text-decoration: none; transition: .2s ease-in-out;
 h1{.arial(48px, 900, @slate); padding: 28px 0; text-align: center;}
 h2{.arial(36px, 700, @black); padding: 24px 0;}
 h3{.arial(24px, 700, @black); padding: 20px 0;}
-p{.arial(16px, 600, @navy); line-height: 1.6; padding: 40px 0; width: 100%; max-width: 768px;}
+p{.arial(18px, 600, @navy); line-height: 1.6; padding: 40px 0; width: 100%; max-width: 768px;}
 
 a.tertiary-button{display: flex;  flex-direction: row; justify-content: center; align-items: center; white-space: nowrap; min-width: 45px; padding: 0 20px; height: 40px; .arial(16px, 600, @navy); letter-spacing: 1.25px; text-decoration: underline;
     &:hover{color: darken(@navy, 10%);}
@@ -96,6 +96,7 @@ a.primary-button{display: flex; flex-direction: row; justify-content: center; al
       .footer-copyright{padding: 0 20px;}
     }
   }
+  p{font-size: 16px;}
 }
 
 @media screen and (min-width: 1450px){
