@@ -20,7 +20,7 @@ export class HelpComponent implements OnInit {
 
   onSubmit() {
     const body = new HttpParams()
-    .set('form-name', 'contact')
+    .set('form-name', 'contactForm')
     .append('firstName', this.contactForm.value.name)
     .append('lastName', this.contactForm.value.lastName)
     .append('email', this.contactForm.value.email)
