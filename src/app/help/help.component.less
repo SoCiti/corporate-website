@@ -5,7 +5,7 @@
     svg{display: flex; width: 145%; height: auto; max-width: inherit; flex: 0 0 auto; transform: rotateY(180deg); position: absolute; top: 0; right: 0%; overflow: hidden;}
 }
 .contact-us-container{display: flex; flex-direction: row; justify-content: space-evenly; align-items: flex-start; flex-wrap: wrap; width: 100%;
-    .email-container, .phone-container{display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex: 1; min-width: 275px; min-height: 125px; padding: 0px; margin: 40px 60px; background: @white; color: @black; border-radius: 8px; box-shadow: 0 0.6px 1.8px rgba(0, 0, 0, 0.014), 0 1.5px 4.3px rgba(0, 0, 0, 0.02), 0 2.9px 8.1px rgba(0, 0, 0, 0.025), 0 5.1px 14.5px rgba(0, 0, 0, 0.03), 0 9.6px 27.2px rgba(0, 0, 0, 0.036), 0 23px 65px rgba(0, 0, 0, 0.05) ;
+    .email-container, .phone-container{display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex: 1; min-width: 325px; width: 50%; flex-grow: 0; min-height: 125px; padding: 0px; margin: 40px 0px; background: @white; color: @black; border-radius: 8px; box-shadow: 0 0.6px 1.8px rgba(0, 0, 0, 0.014), 0 1.5px 4.3px rgba(0, 0, 0, 0.02), 0 2.9px 8.1px rgba(0, 0, 0, 0.025), 0 5.1px 14.5px rgba(0, 0, 0, 0.03), 0 9.6px 27.2px rgba(0, 0, 0, 0.036), 0 23px 65px rgba(0, 0, 0, 0.05) ;
         .icon-container{display: flex; flex-direction: column; justify-content: center; align-items: center; width: 65px; height: 65px; flex-shrink: 0; border-radius: 100%; background: @white-purple; margin-left: 20px;
             i{transform: scale(1.5); color: @plum;
                 &.gg-mail{border: 2px solid !important;}
@@ -18,6 +18,20 @@
     }
 }
 
+form{display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; background: @white; padding: 40px; border-radius: 12px; box-shadow: 0 0.6px 1.8px rgba(0, 0, 0, 0.014), 0 1.5px 4.3px rgba(0, 0, 0, 0.02), 0 2.9px 8.1px rgba(0, 0, 0, 0.025), 0 5.1px 14.5px rgba(0, 0, 0, 0.03), 0 9.6px 27.2px rgba(0, 0, 0, 0.036), 0 23px 65px rgba(0, 0, 0, 0.05);
+    .inputs-container{display: flex; flex-direction: row; justify-content: flex-start; align-items: flex-start; width: 75%; flex-wrap: wrap;
+        .input-container{display: flex; flex-direction: column; justify-content: center; align-items: flex-start; flex-basis: calc(50% - 40px); margin: 0 40px 40px 0;
+            label{.arial(12px, 500, @slate); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 5px;}
+            input, textarea{all: unset; box-sizing: border-box; width: 100%; min-height: 42px; padding: 10px 12px; border: 1px solid @black; .arial(16px, 400, @black); border-radius: 6px;}
+            textarea{min-height: 150px;}
+        }
+    }
+    .action-button-container{display: flex; flex-direction: row; justify-content: flex-start; align-items: center; width: 100%; height: 60px;
+        button{all: unset; box-sizing: border-box; display: flex; flex-direction: row; justify-content: center; align-items: center; width: 120px; height: 40px; background: @plum; color: @white; .arial(18px, 700, @white); border-radius: 8px; transition: .25s ease-in-out;
+            &:hover{background: darken(@plum, 15%); cursor: pointer;}
+        }
+    }
+}
 @media screen and (max-width: 1000px){
     .hero-section.inside-page{padding-bottom: 30%;
         svg{width: 170%;}

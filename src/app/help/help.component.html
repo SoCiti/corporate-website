@@ -96,5 +96,37 @@
 
 
     </div>
-    <!--<h1>FAQ</h1>-->
-</main>
+    <form name="Contact Form" netlify data-netlify="true" method="POST" netlify-honeypot="bot-field">
+      <h2>Contact Form</h2>
+      <input type="hidden" name="bot-field" />   
+      <input type="hidden" name="form-name" value="contact"/>
+      <div class="inputs-container">
+        <div class="input-container">
+          <label for="First Name">First Name</label>
+          <input type="text" name="First Name" requiredn/>
+        </div>
+        <div class="input-container">
+          <label for="Last Name">Last Name</label>
+          <input type="text" name="Last Name" required />
+        </div>
+        <div class="input-container">
+          <label for="Phone Number">Phone Number</label>
+          <input type="tel" name="Phone Number" required />
+        </div>
+        <div class="input-container">
+          <label for="Email">Email</label>
+          <input id="email" type="email" name="Email" required />
+        </div>
+        <div class="input-container">
+          <label for="Message">Messsage</label>
+          <textarea class="text-area" wrap="hard" name="Message" required>
+
+          </textarea>
+        </div>
+      </div>
+      
+      <div class="action-button-container">
+        <button type="submit" value="Submit">Submit</button>
+      </div>
+    </form>
+  </main>
