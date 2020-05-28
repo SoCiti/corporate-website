@@ -15,30 +15,28 @@
 <body>
   <app-root></app-root>
   <noscript>Please enable JavaScript to continue using this application.</noscript>
-  <form name="contactForm" subject='A Message From SoCiti Contact Form' id="contact-form" netlify netlify-honeypot="bot-field" hidden>
+  <form name="contactForm" subject='A Message From SoCiti Contact Form' id="contact-form" netlify hidden>
     <h2>Contact Form</h2>
-    <input type="hidden" name="bot-field" />   
-    <input type="hidden" name="form-name" value="contactForm"/>
     <div class="inputs-container">
       <div class="input-container">
         <label for="First Name">First Name</label>
-        <input type="text" name="First Name" />
+        <input type="text" name="firstName" />
       </div>
       <div class="input-container">
         <label for="Last Name">Last Name</label>
-        <input type="text" name="Last Name" />
+        <input type="text" name="lastName" />
       </div>
       <div class="input-container">
         <label for="Phone Number">Phone Number</label>
-        <input type="tel" name="Phone Number" />
+        <input type="tel" name="phone" />
       </div>
       <div class="input-container">
         <label for="Email">Email</label>
-        <input id="email" type="email" name="Email" />
+        <input id="email" type="email" name="email" />
       </div>
       <div class="input-container">
         <label for="Message">Messsage</label>
-        <textarea class="text-area" wrap="hard" name="Message"> </textarea>
+        <textarea class="text-area" wrap="hard" name="message"> </textarea>
       </div>
     </div>
     
