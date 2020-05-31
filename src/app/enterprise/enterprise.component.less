@@ -17,6 +17,15 @@
 
 }
 
+.enterprise-description{
+    ul{
+        li{display: flex; align-items: center; .arial(16px, 500, @black); padding-bottom: 20px; position: relative; margin-left: 20px;
+            i{display: flex; justify-content: center; align-items: center; color: @plum; border: 2px solid @plum; border-radius: 100%;padding: 14px; margin-right: 25px;
+                &:after{width: 8px; height: 13px; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(45deg); transform-origin: center;} 
+            }
+        }
+    }
+}
 @media screen and (max-width: 1000px){
     .hero-section.inside-page{padding-bottom: 30%;
         svg{width: 170%;}
