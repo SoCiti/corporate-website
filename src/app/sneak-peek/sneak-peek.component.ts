@@ -42,7 +42,7 @@ export class SneakPeekComponent implements OnInit {
     .append('legiscript', this.demoForm.value.legiscript)
     .append('insights', this.demoForm.value.insights)
     .append('thirdwatch', this.demoForm.value.thirdwatch)
-    .append('comments', this.demoForm.value.message);
+    .append('comments', this.demoForm.value.comments);
     this.http.post('/', body.toString(), {headers: { 'Content-Type': 'application/x-www-form-urlencoded' }}).subscribe(
       res => {},
       err => {
