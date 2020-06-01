@@ -38,7 +38,8 @@
               "src/styles.less"
             ],
             "scripts": [
-              "src/assets/js/scripts.js"
+              "src/assets/js/scripts.js",
+              "src/assests/js/analytics.js"
             ],
             "es5BrowserSupport": true
           },
