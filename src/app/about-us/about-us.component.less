@@ -1,8 +1,9 @@
 @import '../../styles.less';
 
 .hero-section.inside-page{display: flex; width: 100%; height: auto; padding-bottom: 25%; /*background: url('../../assets/images/nyc.webp') no-repeat;*/ background-size: cover; background-position: center center; background-blend-mode: luminosity; /*background-color: rgba(84, 67, 136, .5);*/ margin-top: 0px; position: relative; overflow: hidden; z-index: 1;
+    .header-fallback-bg{display: none; width: 100%; height: auto;  min-height: 100px; max-width: inherit; background: linear-gradient(to right, #DD512F, #57345e); flex: 0 0 auto; transform: rotateY(180deg); position: absolute; top: 0; right: 0%; z-index: 2; overflow: hidden;}
     #wave-end{display: block; position: absolute; width: 1px; height: 1px; top: 80px; left: 0; opacity: 0; pointer-events: none;}
-    svg{display: flex; width: 145%; height: auto; max-width: inherit; flex: 0 0 auto; transform: rotateY(180deg); position: absolute; top: 0; right: 0%; overflow: hidden;}
+    svg{display: flex; width: 145%; height: auto; max-width: inherit; flex: 0 0 auto; transform: rotateY(180deg); position: absolute; top: 0; right: 0%; z-index: 1; overflow: hidden;}
 }
 
 p{margin: 0 auto;
@@ -42,5 +43,12 @@ p{margin: 0 auto;
 @media screen and (max-width: 540px){
     .leadership-cards-container{
         .individual-card{margin: 20px 0;}
+    }
+}
+
+@supports (-webkit-touch-callout: none) {
+    .hero-section{
+        .header-fallback-bg{display: flex;}
+        svg{display: none;}
     }
 }
