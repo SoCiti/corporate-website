@@ -1,9 +1,10 @@
 @import '../../styles.less';
 
 .hero-section{display: flex; width: 100%; height: auto; padding-bottom: 56.25%; /*background: url('../../assets/images/nyc.webp') no-repeat;*/ background-size: cover; background-position: center center; background-blend-mode: luminosity; /*background-color: rgba(84, 67, 136, .5);*/ margin-top: 0px; position: relative; overflow: hidden; z-index: 1;
+    .header-fallback-bg{display: none; width: 100%; height: auto;  min-height: 120px; max-width: inherit; background: linear-gradient(to right, #DD512F, #57345e); flex: 0 0 auto; transform: rotateY(180deg); position: absolute; top: 0; right: 0%; z-index: 2; overflow: hidden;}
     #wave-end{display: block; position: absolute; width: 1px; height: 1px; top: 80px; left: 0; opacity: 0; pointer-events: none;}
     figure{display: block; width: 100%; }
-    svg{display: flex; width: 145%; height: auto;  min-height: 40px; max-width: inherit; flex: 0 0 auto; transform: rotateY(180deg); position: absolute; top: 0; right: 0%; overflow: hidden;}
+    svg{display: flex; width: 145%; height: auto;  min-height: 40px; max-width: inherit; flex: 0 0 auto; transform: rotateY(180deg); position: absolute; top: 0; right: 0%; z-index: 1; overflow: hidden;}
     .hero-section-content{display: flex; flex-direction: column; justify-content: flex-end; align-items: flex-start; width: 100%; height: 100%; padding: 0px 40px 40px 40px; /*background: rgba(0,0,0, .25);*/ position: absolute; top: 0; left: 0; z-index: 2;
         label{.arial(12px, 600, lighten(@slate, 10%)); text-transform: uppercase; letter-spacing: 2.5px;padding-bottom: 12px;}
         /*h1{.arial(64px, 900, @white); padding: 0 0 12px 0px;}*/
@@ -191,3 +192,9 @@ video.featured-video{border-radius: 10px; box-shadow: 0 1.2px 3.4px -5px rgba(0,
 }
 
 
+@supports (-webkit-touch-callout: none) {
+    .header-section{
+        .header-fallback-bg{display: flex;}
+        svg{display: none;}
+    }
+}
