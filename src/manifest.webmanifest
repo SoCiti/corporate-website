@@ -1,8 +1,8 @@
 {
-  "name": "soCiti",
-  "short_name": "soCiti",
+  "name": "SoCiti",
+  "short_name": "SoCiti",
   "theme_color": "#544388",
-  "background_color": "#544388",
+  "background_color": "#ffffff",
   "display": "standalone",
   "scope": "./",
   "start_url": "./",
