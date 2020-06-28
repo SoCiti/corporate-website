@@ -3,9 +3,23 @@
 header{display: flex; flex-direction: row; justify-content: flex-start; align-items: center; width: 100%; height: 65px; padding: 0 40px; background: transparent; color: @white; box-shadow: 0 0px 0px 0px rgba(101, 74, 152, 0.05), 0 0px 0px 0 rgba(112, 91, 140, 0.04), 0 0px 0px 0 rgba(0, 0, 0, 0.06); position: fixed; top: 0; left: 0; z-index: 100; transition: .25s ease-in-out;
     .logo{display: flex; width: 98px; height: 98px; background: url('../../assets/images/logo-white.png') no-repeat; flex-shrink: 0; background-size: contain; .arial(24px, 900, @plum); letter-spacing: 3px; margin-left: -20px; transition: .25s ease-in-out;}
     ul.nav-links{display: flex; flex-direction: row; justify-content: flex-start;  align-items: center; margin-left: 15px;
-        > li{display: flex; justify-content: center; align-items: center;
-            a{display: flex; justify-content: center; align-items: center; .arial(14px, 500, @white); padding: 0 28px; text-transform: uppercase; letter-spacing: 2px; font-variant: small-caps; transition: .25s ease-in-out;
-                &:hover{color: darken(@silver-purple, 5%);}
+        > li{display: flex; justify-content: center; align-items: center; height: 40px; position: relative;
+            a{display: flex; justify-content: center; align-items: center; height: 100%; .arial(14px, 500, @white); padding: 0 28px; text-transform: uppercase; letter-spacing: 2px; font-variant: small-caps; transition: .25s ease-in-out;
+                &:hover{color: darken(@silver-purple, 5%);
+                    
+                }
+            }
+            .overflow-menu{display: flex; flex-direction: column; justify-content: flex-start; align-items: center; min-width: 200px; min-height: 100px; background: @white; color: @slate; border-radius: 8px; box-shadow: 0 5px 8px rgba(40, 40, 50, .2); position: absolute; top: -20px; left: 50%; transform: translateX(-50%); opacity: 0; will-change: transform; transition: .25s cubic-bezier(.4, 0, .2, 1); pointer-events: none; z-index: 99;
+                ul.overflow-nav-links{display: flex; flex-direction: column; justify-content: flex-start; align-items: center; list-style-type: none; width: 100%; margin: 0; padding: 12px 0;
+                    li{display: flex; width: 100%;
+                        a{display: flex; justify-content: flex-start; align-items: center; width: 100%; text-decoration: none; text-transform: none; font-variant: normal; color: @slate; font-size: 14.5px; font-weight: 700; letter-spacing: 1px; background: transparent; padding: 15px; transition: .2s ease-in-out;
+                            &:hover{background: @white-purple; cursor: pointer;}
+                        }
+                    }
+                }
+            }
+            &:hover{
+                .overflow-menu{opacity: 1; pointer-events: auto; transform: translate(-50%, 60px);}
             }
         }
         .social-links{display: none; flex-direction: row; justify-content: center; width: 100%; height: 60px; background: lighten(@white-purple, 5%); position: absolute; bottom: 0; left: 0;

@@ -18,6 +18,13 @@ import { SneakPeekComponent } from './sneak-peek/sneak-peek.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { InvestorRelationsComponent } from './investor-relations/investor-relations.component';
 import { PartnersComponent } from './partners/partners.component';
+import { SoproposeComponent } from './solutions/sopropose/sopropose.component';
+import { RollManagerComponent } from './solutions/roll-manager/roll-manager.component';
+import { CommuniqueComponent } from './solutions/communique/communique.component';
+import { ConnectionsComponent } from './solutions/connections/connections.component';
+import { LegiscriptComponent } from './solutions/legiscript/legiscript.component';
+import { InsightsComponent } from './solutions/insights/insights.component';
+import { ThirdwatchComponent } from './solutions/thirdwatch/thirdwatch.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +38,14 @@ import { PartnersComponent } from './partners/partners.component';
     SneakPeekComponent,
     AboutUsComponent,
     InvestorRelationsComponent,
-    PartnersComponent
+    PartnersComponent,
+    SoproposeComponent,
+    RollManagerComponent,
+    CommuniqueComponent,
+    ConnectionsComponent,
+    LegiscriptComponent,
+    InsightsComponent,
+    ThirdwatchComponent
   ],
   imports: [
     BrowserModule,

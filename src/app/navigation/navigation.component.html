@@ -2,7 +2,33 @@
     <a routerLink="home" class="logo"></a>
     <ul class="nav-links">
         <li><a routerLink="home" (click)="toggleSideNav()">Home</a></li>
-        <li><a routerLink="solutions" (click)="toggleSideNav()">Solutions</a></li>
+        <li><a (click)="toggleSideNav()">Solutions</a>
+            <div class="overflow-menu">
+                <ul class="overflow-nav-links">
+                    <li>
+                        <a routerLink="/solutions/sopropose">SoPropose</a>
+                    </li>
+                    <li>
+                        <a routerLink="/solutions/roll-manager">Roll Manager</a>
+                    </li>
+                    <li>
+                        <a routerLink="/solutions/communique">Communiqué</a>
+                    </li>
+                    <li>
+                        <a routerLink="/solutions/connections">Connections</a>
+                    </li>
+                    <li>
+                        <a routerLink="/solutions/legiscript">LegiScript</a>
+                    </li>
+                    <li>
+                        <a routerLink="/solutions/insights">Insights</a>
+                    </li>
+                    <li>
+                        <a routerLink="/solutions/thirdwatch">Thirdwatch</a>
+                    </li>
+                </ul>
+            </div>
+        </li>
         <li><a routerLink="enterprise" (click)="toggleSideNav()">Enterprise</a></li>
         <li><a routerLink="contact" (click)="toggleSideNav()">Contact Us</a></li>
 

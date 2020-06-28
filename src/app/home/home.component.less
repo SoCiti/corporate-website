@@ -4,19 +4,25 @@
     .header-fallback-bg{display: none; width: 100%; height: auto;  min-height: 100px; max-width: inherit; background: linear-gradient(to right, #DD512F, #57345e); flex: 0 0 auto; transform: rotateY(180deg); position: absolute; top: 0; right: 0%; z-index: 2; overflow: hidden;}
     #wave-end{display: block; position: absolute; width: 1px; height: 1px; top: 80px; left: 0; opacity: 0; pointer-events: none;}
     figure{display: block; width: 100%; }
-    svg{display: flex; width: 145%; height: auto;  min-height: 40px; max-width: inherit; flex: 0 0 auto; transform: rotateY(180deg); position: absolute; top: 0; right: 0%; z-index: 1; overflow: hidden;}
-    .hero-section-content{display: flex; flex-direction: column; justify-content: flex-end; align-items: flex-start; width: 100%; height: 100%; padding: 0px 40px 40px 40px; /*background: rgba(0,0,0, .25);*/ position: absolute; top: 0; left: 0; z-index: 2;
-        label{.arial(12px, 600, lighten(@slate, 10%)); text-transform: uppercase; letter-spacing: 2.5px;padding-bottom: 12px;}
-        /*h1{.arial(64px, 900, @white); padding: 0 0 12px 0px;}*/
-        img{width: 300px; height: auto; margin: 5px 0 0 0;}
-        p{/*.arial(18px, 600, @white); */ .arial(18px, 600, @slate); max-width: 540px; line-height: 1.6;}
-        .hero-button-container{display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-wrap: nowrap; margin: 25px 0 0 0;
-            a.secondary-button{display: flex; flex-direction: row; justify-content: center; align-items: center; min-width: 60px; padding: 0 24px; height: 48px; text-align: center; background: transparent; .arial(16px, 700, @navy); border-radius: 8px; border: 2px solid @navy; margin-right: 15px;
-                &:hover{background: @white; color: @plum; border: 2px solid @plum;}
+    > svg{display: flex; width: 145%; height: auto;  min-height: 40px; max-width: inherit; flex: 0 0 auto; transform: rotateY(180deg); position: absolute; top: 0; right: 0%; z-index: 1; overflow: hidden;}
+    .hero-section-content{display: flex; flex-direction: row; justify-content: space-between; align-items: flex-end; width: 100%; height: 100%; padding: 0px 40px 40px 40px; /*background: rgba(0,0,0, .25);*/ position: absolute; top: 0; left: 0; z-index: 2; overflow: hidden;
+        
+        .hero-content{display: flex; flex-direction: column; justify-content: flex-end; align-items: flex-start; 
+            label{.arial(12px, 600, lighten(@slate, 10%)); text-transform: uppercase; letter-spacing: 2.5px;padding-bottom: 12px;}
+            /*h1{.arial(64px, 900, @white); padding: 0 0 12px 0px;}*/
+            img{width: 300px; height: auto; margin: 5px 0 0 0;}
+            p{/*.arial(18px, 600, @white); */ .arial(18px, 600, @slate); max-width: 540px; line-height: 1.6;}
+            .hero-button-container{display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-wrap: nowrap; margin: 25px 0 0 0;
+                a.secondary-button{display: flex; flex-direction: row; justify-content: center; align-items: center; min-width: 60px; padding: 0 24px; height: 48px; text-align: center; background: transparent; .arial(16px, 700, @navy); border-radius: 8px; border: 2px solid @navy; margin-right: 15px;
+                    &:hover{background: @white; color: @plum; border: 2px solid @plum;}
+                }
+                a.primary-button{background: @plum; color: @white-purple; height: 48px; padding: 0 24px;
+                    &:hover{background: darken(@plum, 5%);}
+                }
             }
-            a.primary-button{background: @plum; color: @white-purple; height: 48px; padding: 0 24px;
-                &:hover{background: darken(@plum, 5%);}
-            }
+        }
+        .svg-container{width: 50%; height: 85%; position: relative;
+            svg{width: 150%; max-width: initial; height: 100%; object-fit: cover; object-position: center; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
         }
     }
 }
@@ -105,9 +111,17 @@ video.featured-video{border-radius: 10px; box-shadow: 0 1.2px 3.4px -5px rgba(0,
     .hero-section{padding-bottom: 63.25%;}
 }
 
+@media screen and (max-width: 1120px){
+    .hero-section{
+        .hero-section-content{
+            .svg-container{display: none;}
+        }
+    }
+}
+
 @media screen and (max-width: 1075px){
     .hero-section{padding-bottom: 75.25%;
-        svg{width: 170%;}
+        > svg{width: 170%;}
     }
 }
 @media screen and (max-width: 950px){
@@ -140,11 +154,13 @@ video.featured-video{border-radius: 10px; box-shadow: 0 1.2px 3.4px -5px rgba(0,
     .hero-section{padding-bottom: 83.25%;
         .hero-section-content{padding: 0 20px 40px 20px;
             p{}
-            .hero-button-container{flex-direction: column; align-items: flex-start; width: 100%; max-width: 275px; margin-left: 10px;
-                a.secondary-button, a.primary-button{width: 100%;}
-                a.secondary-button{margin-bottom: 20px;}
-                a.primary-button{margin-left: 0;}
-            
+            .hero-content{
+                .hero-button-container{flex-direction: column; align-items: flex-start; width: 100%; max-width: 275px; margin-left: 10px;
+                    a.secondary-button, a.primary-button{width: 100%;}
+                    a.secondary-button{margin-bottom: 20px;}
+                    a.primary-button{margin-left: 0;}
+                
+                }
             }
         }
     }
@@ -165,10 +181,13 @@ video.featured-video{border-radius: 10px; box-shadow: 0 1.2px 3.4px -5px rgba(0,
 @media screen and (max-width: 540px){
     .hero-section{padding-bottom: 98.25%; min-height: 90vh;
         .hero-section-content{
-            label{font-size: 11px;}
-            img{width: 265px;}
-            p{font-size: 16px; line-height: 1.5;}
-            .hero-button-container{ margin: 25px auto 0 auto;}
+            .hero-content{
+                label{font-size: 11px;}
+                img{width: 265px;}
+                p{font-size: 16px; line-height: 1.5;}
+                .hero-button-container{ margin: 25px auto 0 auto;}
+            }
+
         }
     }
     .sociti-advantage{padding-bottom: 96.25%;
@@ -195,6 +214,6 @@ video.featured-video{border-radius: 10px; box-shadow: 0 1.2px 3.4px -5px rgba(0,
 @supports (-webkit-touch-callout: none) {
     .hero-section{
         .header-fallback-bg{display: flex;}
-        svg{display: none;}
+        > svg{display: none;}
     }
 }
