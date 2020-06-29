@@ -2,29 +2,29 @@
     <a routerLink="home" class="logo"></a>
     <ul class="nav-links">
         <li><a routerLink="home" (click)="toggleSideNav()">Home</a></li>
-        <li><a (click)="toggleSideNav()">Solutions</a>
+        <li id="accordion-link"><a (click)="toggleNavAccordion()">Solutions</a>
             <div class="overflow-menu">
                 <ul class="overflow-nav-links">
                     <li>
-                        <a routerLink="/solutions/sopropose">SoPropose</a>
+                        <a routerLink="/solutions/sopropose" (click)="toggleSideNav(); toggleNavAccordion();">SoPropose</a>
                     </li>
                     <li>
-                        <a routerLink="/solutions/roll-manager">Roll Manager</a>
+                        <a routerLink="/solutions/roll-manager" (click)="toggleSideNav(); toggleNavAccordion();">Roll Manager</a>
                     </li>
                     <li>
-                        <a routerLink="/solutions/communique">Communiqué</a>
+                        <a routerLink="/solutions/communique" (click)="toggleSideNav(); toggleNavAccordion();">Communiqué</a>
                     </li>
                     <li>
-                        <a routerLink="/solutions/connections">Connections</a>
+                        <a routerLink="/solutions/connections" (click)="toggleSideNav(); toggleNavAccordion();">Connections</a>
                     </li>
                     <li>
-                        <a routerLink="/solutions/legiscript">LegiScript</a>
+                        <a routerLink="/solutions/legiscript" (click)="toggleSideNav(); toggleNavAccordion();">LegiScript</a>
                     </li>
                     <li>
-                        <a routerLink="/solutions/insights">Insights</a>
+                        <a routerLink="/solutions/insights" (click)="toggleSideNav(); toggleNavAccordion();">Insights</a>
                     </li>
                     <li>
-                        <a routerLink="/solutions/thirdwatch">Thirdwatch</a>
+                        <a routerLink="/solutions/thirdwatch" (click)="toggleSideNav(); toggleNavAccordion();">Thirdwatch</a>
                     </li>
                 </ul>
             </div>

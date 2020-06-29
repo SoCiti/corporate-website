@@ -72,9 +72,25 @@ header{display: flex; flex-direction: row; justify-content: flex-start; align-it
     header{
         a.nav-menu-icon{display: flex;}
         ul.nav-links{display: flex; flex-direction: column; justify-content: flex-end; align-items: center; width: 375px; height: 100vh; padding: 40px 30px 120px 30px; background: @white; box-shadow: 0px 4px 20px rgba(0,0,0, .2); color: @white; position: fixed; bottom: 0; right: 0; transform: translateX(100%); will-change: transform; transition: transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1),visibility 0.5s cubic-bezier(0.645, 0.045, 0.355, 1),-webkit-transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1); z-index: 101;
-            > li{width: 100%; margin: 0; border-bottom: 1px solid rgba(0, 0, 0, .15);
+            > li{width: 100%; height: auto; margin: 0; border-bottom: 1px solid rgba(0, 0, 0, .15);
                 a{justify-content: flex-end; width: 100%; .arial(16px, 700, @black); padding: 25px 0 25px 20px;
                     &:hover{color: @plum;}
+                }
+                &:nth-of-type(2){flex-direction: column; justify-content: flex-start; height: 80px; transition: .25s ease-in-out;
+                    a{height: auto; padding: 25px 0 10px 20px;}
+                    .overflow-menu{opacity: 0; pointer-events: none; transform: none;position: initial; top: auto; left: auto; transform: none; min-width: 100%; box-shadow: none; border-radius: none; transition: unset;
+                        ul.overflow-nav-links{
+                            li{
+                                a{justify-content: flex-end; padding: 15px 0 15px 20px;}
+                            }
+                        }
+                    }
+                    &.expanded{height: auto;
+                        .overflow-menu{opacity: 1; pointer-events: auto; transition: .45s cubic-bezier(.4, 0, .2, 1);}
+                    }
+                    &:hover{opacity: inherit; pointer-events: inherit; transform: inherit;
+                        
+                    }
                 }
             }
             .social-links{display: flex;}

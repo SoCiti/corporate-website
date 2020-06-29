@@ -11,6 +11,7 @@ export class NavigationComponent implements OnInit {
   sideNav;
 
   header = document.getElementById('header');
+  accordionTrigger;
   @HostListener('window:scroll', ['$event'])
 
   myFunction(event) {
@@ -24,11 +25,16 @@ export class NavigationComponent implements OnInit {
 
   ngOnInit(): void {
     this.sideNav = document.querySelector('header');
-
+    this.accordionTrigger = document.querySelector('#accordion-link');
   }
 
   toggleSideNav() {
     this.sideNav.classList.toggle('open');
     window.navigator.vibrate(50);
+  }
+
+  toggleNavAccordion() {
+    console.log(this.accordionTrigger);
+    this.accordionTrigger.classList.toggle('expanded');
   }
 }
