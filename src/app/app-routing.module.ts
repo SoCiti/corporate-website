@@ -28,7 +28,7 @@ const routes: Routes = [
   {path: 'solutions/legiscript', component: LegiscriptComponent},
   {path: 'solutions/insights', component: InsightsComponent},
   {path: 'solutions/thirdwatch', component: ThirdwatchComponent},
-  {path: 'contact', component: HelpComponent},
+  {path: 'connect', component: HelpComponent},
   {path: 'demo', component: SneakPeekComponent},
   {path: 'about-us', component: AboutUsComponent},
   {path: 'partners', component: PartnersComponent},

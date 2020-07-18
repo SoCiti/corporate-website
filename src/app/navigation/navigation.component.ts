@@ -1,5 +1,5 @@
 import { Component, OnInit, HostListener } from '@angular/core';
-
+import { Title } from '@angular/platform-browser';
 @Component({
   selector: 'app-navigation',
   templateUrl: './navigation.component.html',
@@ -21,7 +21,7 @@ export class NavigationComponent implements OnInit {
       document.getElementById('header').className = '';
     }
   }
-  constructor() { }
+  constructor(private titleService: Title ) { }
 
   ngOnInit(): void {
     this.sideNav = document.querySelector('header');
@@ -37,4 +37,9 @@ export class NavigationComponent implements OnInit {
     console.log(this.accordionTrigger);
     this.accordionTrigger.classList.toggle('expanded');
   }
+
+  public setTitle( newTitle: string) {
+    this.titleService.setTitle( newTitle );
+  }
+
 }
