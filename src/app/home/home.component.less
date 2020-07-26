@@ -27,7 +27,15 @@
     }
 }
 
-video.featured-video{border-radius: 10px; box-shadow: 0 1.2px 3.4px -5px rgba(0, 0, 0, 0.022), 0 3.1px 8.7px -5px rgba(0, 0, 0, 0.031), 0 6.4px 17.7px -5px rgba(0, 0, 0, 0.039), 0 13.1px 36.5px -5px rgba(0, 0, 0, 0.048), 0 36px 100px -5px rgba(0, 0, 0, 0.07);}
+.featured-items-container{display: flex; flex-direction: row; justify-content: space-evenly; flex-wrap: wrap; width: 100%; margin: 80px 0 80px 0;
+    .featured-item{display: flex; flex-direction: column; align-items: center; width: 33.333%; min-width: 350px; margin: 20px 0; flex: 1;
+        .featured-icon{display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%;
+            img{width: auto; height: 120px;}
+        }
+        p.description{text-align: center; padding: 20px;}
+    }
+}
+
 
 .info-cards-container{display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; flex-wrap: wrap; width: 100%; min-height: 200px; margin-top: 40px;
     .info-card{display: flex; flex-direction: row; justify-content: space-between; align-items: center; flex: 1; min-width: 100%; min-height: 175px; padding: 0 40px; margin: 100px 0; background: transparent; position: relative;/*border-radius: 12px; box-shadow: 0 4px 20px rgba(84,67,136,.1);*/
@@ -35,6 +43,7 @@ video.featured-video{border-radius: 10px; box-shadow: 0 1.2px 3.4px -5px rgba(0,
             h2{text-align: left; padding: 20px 0 20px 0; position: relative;
                 &:before{content: ''; width: 65px; height: 4px; background: @ginger; border-radius: 26px; position: absolute; bottom: 5px; left: 0;}
             }
+            .sub-headline{.arial(26px, 500, @black); line-height: 1.4; padding: 20px 0;}
             p{padding: 20px 0;}
         }
         .solution-icon-container{width: 50%; height: 300px; max-height: 100%; position: relative;
@@ -69,12 +78,12 @@ video.featured-video{border-radius: 10px; box-shadow: 0 1.2px 3.4px -5px rgba(0,
     .view-all{margin: 40px auto;}
 }
 
-.sociti-advantage{width: calc(100vw - 8px); height: 0; margin: 0 0 -40px -40px; padding-bottom: 56.25%; background: url('../../assets/images/nyc.jpg') no-repeat; background-position: center center; background-size: cover; background-blend-mode: luminosity; background-color: rgba(84, 67, 136, .5); color: @white; position: relative;
-    h1{font-size: 4vw; color: @white; margin-top: 0; padding-top: 0;}
+.sociti-advantage{width: calc(100vw - 8px); height: 0; margin: 0 0 -40px -40px; padding-bottom: 56.25%; background: url('../../assets/images/nyc.jpg') no-repeat; background-position: center center; background-size: cover; background-blend-mode: luminosity; background-color: rgba(84, 67, 136, .5); color: @white; position: relative; overflow: hidden;
+    h1{font-size: 3.5vw; line-height: 1.4; color: @white; margin-top: 0; padding: 0 40px; text-shadow: 5px 5px 45px #000;}
     .section-content{display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%; height: 100%; padding: 20px; position: absolute; top: 0; left: 0; z-index: 3; overflow: hidden;
-        p{font-size: 1.5vw; color: @white;}
+        p{font-size: 1.5vw; font-weight: 500; text-shadow: 5px 5px 45px #000; color: @white;}
         .tagline{display: flex; flex-direction: row; justify-content: center; align-items: flex-start; width: 100%;
-            span{.arial(32px, 700, @white-purple); font-size: 2.5vw; position: relative; padding: 0 20px; white-space: nowrap;
+            span{.arial(32px, 500, @white-purple); font-size: 2.5vw; position: relative; padding: 0 20px; white-space: nowrap;
                 
             }
         }
@@ -91,14 +100,20 @@ video.featured-video{border-radius: 10px; box-shadow: 0 1.2px 3.4px -5px rgba(0,
     }
 }
 
+@media screen and (min-width: 1650px){
+    .sociti-advantage{margin: 0 0 -40px 0; left: 50%; transform: translateX(-50%);
+        .section-content{left: 50%; transform: translateX(-50%);}
+    }
+}
+
 @media screen and (min-width: 1450px){
     .hero-section{
         .hero-section-content{padding: 0px 40px 40px 40px;}
     }
     .sociti-advantage{
-        h1{font-size: 36px;}
+        h1{font-size: 48px;}
         .section-content{
-            p{font-size: 16px;}
+            p{font-size: 24px;}
             .tagline{
                 span{font-size: 28px;}
             }
@@ -164,11 +179,11 @@ video.featured-video{border-radius: 10px; box-shadow: 0 1.2px 3.4px -5px rgba(0,
             }
         }
     }
-    .video-hide{display: none;}
+
     .sociti-advantage{width: 100vw; padding-bottom: 78.25%; margin-left: -20px;
         h1{font-size: 32px;}
         .section-content{
-            p{font-size: 14px;}
+            p{font-size: 18px;}
             .tagline{
                 span{font-size: 21px;}
             }

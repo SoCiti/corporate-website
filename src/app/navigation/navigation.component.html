@@ -1,30 +1,31 @@
 <header id="header">
-    <a routerLink="home" class="logo"></a>
+    <a routerLink="home" class="logo" (click)="setTitle('SoCiti | Ignite Efficiency, Foster Synergy')"></a>
     <ul class="nav-links">
         <li><a routerLink="home" (click)="toggleSideNav(); setTitle('SoCiti | Ignite Efficiency, Foster Synergy')">Home</a></li>
+        <li><a routerLink="how-it-works" (click)="toggleSideNav(); setTitle('How It Works | SoCiti')">How It Works</a></li>
         <li id="accordion-link"><a (click)="toggleNavAccordion(); setTitle('Solutions Suite | SoCiti')">Solutions</a>
             <div class="overflow-menu">
                 <ul class="overflow-nav-links">
                     <li>
-                        <a routerLink="/solutions/sopropose" (click)="toggleSideNav(); toggleNavAccordion(); setTitle( 'SoPropose™ | Solutions Suite | SoCiti' )">SoPropose</a>
+                        <a routerLink="/solutions/thirdwatch" (click)="toggleSideNav(); toggleNavAccordion(); setTitle('ThirdWatch™ | Solutions Suite | SoCiti ')">ThirdWatch</a>
                     </li>
                     <li>
-                        <a routerLink="/solutions/roll-manager" (click)="toggleSideNav(); toggleNavAccordion(); setTitle('Roll Manager | Solutions Suite | SoCiti')">Roll Manager</a>
+                        <a routerLink="/solutions/connections" (click)="toggleSideNav(); toggleNavAccordion(); setTitle('Connections | Solutions Suite | SoCiti')">Connections</a>
                     </li>
                     <li>
                         <a routerLink="/solutions/communique" (click)="toggleSideNav(); toggleNavAccordion(); setTitle('Comminiqué | Solutions Suite | SoCiti')">Communiqué</a>
                     </li>
                     <li>
-                        <a routerLink="/solutions/connections" (click)="toggleSideNav(); toggleNavAccordion(); setTitle('Connections | Solutions Suite | SoCiti')">Connections</a>
+                        <a routerLink="/solutions/roll-manager" (click)="toggleSideNav(); toggleNavAccordion(); setTitle('Roll Manager | Solutions Suite | SoCiti')">Roll Manager</a>
+                    </li>
+                    <li>
+                        <a routerLink="/solutions/sopropose" (click)="toggleSideNav(); toggleNavAccordion(); setTitle( 'SoPropose™ | Solutions Suite | SoCiti' )">SoPropose</a>
                     </li>
                     <li>
                         <a routerLink="/solutions/legiscript" (click)="toggleSideNav(); toggleNavAccordion(); setTitle('LegiScript™ | Solutions Suite | SoCiti')">LegiScript</a>
                     </li>
                     <li>
                         <a routerLink="/solutions/insights" (click)="toggleSideNav(); toggleNavAccordion(); setTitle('Insights | Solutions Suite | SoCiti')">Insights</a>
-                    </li>
-                    <li>
-                        <a routerLink="/solutions/thirdwatch" (click)="toggleSideNav(); toggleNavAccordion(); setTitle('ThirdWatch™ | Solutions Suite | SoCiti ')">Thirdwatch</a>
                     </li>
                 </ul>
             </div>
@@ -34,16 +35,17 @@
 
         <div class="social-links">
             <ul>
-                <!--<li><a href="#"><i class="gg-twitter"></i></a></li>-->
-                <!--<li><a href="#"><i class="gg-instagram"></i></a></li>-->
-                <li><a href="https://www.facebook.com/SoCiti-100801584996769"><i class="gg-facebook"></i></a></li>
+                <li><a href="https://www.facebook.com/pages/category/Information-Technology-Company/SoCiti-100801584996769/"><i class="gg-facebook"></i></a></li>
+                <li><a href="http://linkedin.com/company/sociti"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a></li>
+                <li><a href="https://twitter.com/so_citi"><i class="gg-twitter"></i></a></li>
+                <li><a href="https://www.youtube.com/channel/UCSJVr6ddMwNYj3hx2o6i5xw"><i class="gg-youtube"></i></a></li>
             </ul>
         </div>
     </ul>
     <div class="nav-cta">
 
         <!--<a class="tertiary-button">Login</a>-->
-        <a routerLink="/demo" class="primary-button">Request A Demo</a>
+        <a routerLink="/demo" (click)="setTitle('Request Demo | SoCiti | Ignite Efficiency, Foster Synergy')" class="primary-button">Request Demo</a>
     </div>
     <a class="nav-menu-icon" (click)="toggleSideNav()"><i class="gg-menu-right"></i></a>
 </header>

@@ -25,7 +25,10 @@ import { ConnectionsComponent } from './solutions/connections/connections.compon
 import { LegiscriptComponent } from './solutions/legiscript/legiscript.component';
 import { InsightsComponent } from './solutions/insights/insights.component';
 import { ThirdwatchComponent } from './solutions/thirdwatch/thirdwatch.component';
-
+import { HowItWorksComponent } from './how-it-works/how-it-works.component';
+import { LeadershipTeamComponent } from './leadership-team/leadership-team.component';
+import { PressComponent } from './press/press.component';
+import { PressPostComponent } from './press/press-post/press-post.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,7 +48,11 @@ import { ThirdwatchComponent } from './solutions/thirdwatch/thirdwatch.component
     ConnectionsComponent,
     LegiscriptComponent,
     InsightsComponent,
-    ThirdwatchComponent
+    ThirdwatchComponent,
+    HowItWorksComponent,
+    LeadershipTeamComponent,
+    PressComponent,
+    PressPostComponent,
   ],
   imports: [
     BrowserModule,

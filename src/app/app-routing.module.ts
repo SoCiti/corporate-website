@@ -16,10 +16,15 @@ import { ConnectionsComponent } from './solutions/connections/connections.compon
 import { LegiscriptComponent } from './solutions/legiscript/legiscript.component';
 import { InsightsComponent } from './solutions/insights/insights.component';
 import { ThirdwatchComponent } from './solutions/thirdwatch/thirdwatch.component';
+import { HowItWorksComponent } from './how-it-works/how-it-works.component';
+import { LeadershipTeamComponent } from './leadership-team/leadership-team.component';
+import { PressComponent } from './press/press.component';
+import { PressPostComponent } from './press/press-post/press-post.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'enterprise', component: EnterpriseComponent},
+  {path: 'how-it-works', component: HowItWorksComponent},
   {path: 'solutions', component: SolutionsComponent},
   {path: 'solutions/sopropose', component: SoproposeComponent},
   {path: 'solutions/roll-manager', component: RollManagerComponent},
@@ -31,6 +36,9 @@ const routes: Routes = [
   {path: 'connect', component: HelpComponent},
   {path: 'demo', component: SneakPeekComponent},
   {path: 'about-us', component: AboutUsComponent},
+  {path: 'leadership-team', component: LeadershipTeamComponent},
+  {path: 'newsroom', component: PressComponent},
+  {path: 'newsroom/latest', component: PressPostComponent},
   {path: 'partners', component: PartnersComponent},
   {path: 'investors', component: InvestorRelationsComponent},
   {path: '', pathMatch: 'full', redirectTo: 'home'},
